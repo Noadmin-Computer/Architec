@@ -13,7 +13,9 @@ body{
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
+    margin-top: 30px;
 } 
+
 .nav-container{
     position: fixed;
     z-index: 1;
@@ -39,12 +41,7 @@ body{
     line-height: 22px;
     transition: .7s;
 }
-.hamburger .line{
-    width: 30px;
-    height: 2px;
-    margin-top: 4px;
-    background-color: rgb(0, 0, 0);
-}
+
 .hamburger{
     display: none;
     cursor: pointer;
@@ -189,7 +186,7 @@ body{
 .footer{
     text-align: center;
     background-color: #1A1A1A;
-    height: 20vh;
+    height: 25vh;
 }
 .footer-container i{
     width: 40px;
@@ -277,8 +274,7 @@ body{
     .card-container{
         display: block;
         margin: 0 auto;
-    }
-  
+}  
     .nav-link a{
         font-size: 12px;
     }
@@ -300,17 +296,15 @@ body{
         position: fixed;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         width: 100%;
         height: 100vh;
         z-index: 0;
         top: 0;
-        right: -100%;
+        right: 100%;
         background-color: #fff;
         transition: all .5s;
     }
-    .hamburger:checked  ~ .nav-item {
+    .hamburger input:checked + ul.nav-item {
         right: 0%;
     }
 }
@@ -402,5 +396,11 @@ body{
     }
     .text button{
         width: 60%;
+    }
+}
+@media (max-width:380px){
+    .container .subscribe{
+        width: 30%;
+        height: 40px;
     }
 }
